@@ -13,7 +13,7 @@ This repo is a knowledge companion that builds persistent, compounding Obsidian 
 ```
 claude-obsidian/
 ├── skills/              ← 10 SKILL.md files (Agent Skills format)
-├── hooks/               ← SessionStart, PostCompact, PostToolUse, Stop
+├── hooks/               ← SessionStart, PostToolUse, Stop
 ├── .claude-plugin/      ← Claude Code plugin manifest
 ├── _templates/          ← Obsidian Templater templates
 ├── wiki/                ← Generated knowledge base

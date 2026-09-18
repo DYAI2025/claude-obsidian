@@ -26,7 +26,7 @@ Navigation: [[index]] | [[log]] | [[overview]]
 - **Install ID**: `claude-obsidian@claude-obsidian-marketplace`
 - **Releases**: v1.1, v1.4.0, v1.4.1 on GitHub
 - **Skills**: 10 (wiki, wiki-ingest, wiki-query, wiki-lint, save, autoresearch, canvas, defuddle, obsidian-bases, obsidian-markdown)
-- **Hooks**: 4 (SessionStart, PostCompact, PostToolUse, Stop)
+- **Hooks**: 3 (SessionStart, PostToolUse, Stop)
 - **Multi-agent**: bootstrap files for Codex, OpenCode, Gemini, Cursor, Windsurf, GitHub Copilot
 
 ## Install Command (Correct Two-Step Flow)
@@ -47,7 +47,7 @@ There is no `claude plugin install github:owner/repo` shortcut. Both steps are r
 2. `allowed-tools` is NOT valid in skill frontmatter. Use only `name` and `description` (kepano convention).
 3. Obsidian Bases uses `filters/views/formulas`, not Dataview `from/where`
 4. Canvas edges have asymmetric defaults: `fromEnd="none"`, `toEnd="arrow"`
-5. Hook-injected context does not survive compaction. PostCompact hook is required to restore hot cache.
+5. Hook-injected context does not survive compaction. The SessionStart hook's `compact` matcher restores the hot cache after compaction.
 6. `git filter-repo` needs two passes: `--replace-text` for blobs, `--replace-message` for commit messages
 
 ## Style Preferences (Saved to Memory)

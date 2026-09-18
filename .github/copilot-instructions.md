@@ -11,7 +11,7 @@ This repository is a **Claude Code plugin and Obsidian vault** that builds persi
 ## Repository Layout
 
 - `skills/`: 10 skills, each with a `SKILL.md` defining trigger phrases and instructions
-- `hooks/hooks.json`: Claude Code lifecycle hooks (SessionStart, PostCompact, PostToolUse, Stop)
+- `hooks/hooks.json`: Claude Code lifecycle hooks (SessionStart, PostToolUse, Stop)
 - `.claude-plugin/plugin.json`: plugin manifest
 - `wiki/`: generated knowledge base (Markdown files with YAML frontmatter)
 - `.raw/`: immutable source documents (never modify)
